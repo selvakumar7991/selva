@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment-7100
+  name: my-deployment-50000
 spec:
   selector:
     matchLabels:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: "neotys/neoload-loadgenerator"
+        image: "gcr.io/google-samples/hello-app:2.0"
         env:
         - name: "PORT"
-          value: "7100"
+          value: "50000"
